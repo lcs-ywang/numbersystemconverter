@@ -81,12 +81,15 @@ let result = decimalequivalent(value: value, base: b )
 //Output
 
 
+
+
 enum NumberSystemBase: Int {
     case binary = 2
     case octal = 8
     case hexadeciml = 16
     case decimal = 10
 }
+
 
 func getRepresentation(of valueToConvert: Int, inBase base: NumberSystemBase) -> String {
     var decimalValueLeftToConvert = valueToConvert
@@ -122,17 +125,3 @@ func getRepresentation(of valueToConvert: Int, inBase base: NumberSystemBase) ->
     return representation
 }
 
-
-switch b{
-case 2.0:
-    getRepresentation(of:Int(result), inBase:.binary)
-case 8.0:
-    getRepresentation(of:Int(result), inBase:.octal)
-case 16:
-    getRepresentation(of:Int(result), inBase:.hexadeciml)
-case 10:
-    getRepresentation(of:Int(result), inBase: .decimal)
-
-default:
-    break
-}
