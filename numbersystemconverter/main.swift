@@ -125,3 +125,17 @@ func getRepresentation(of valueToConvert: Int, inBase base: NumberSystemBase) ->
     return representation
 }
 
+var t = NumberSystemBase.binary
+switch to {
+case "O":
+    t = .octal
+case "D":
+    t = .decimal
+case "H":
+    t = .hexadeciml
+default:
+    break
+}
+
+var abc =  getRepresentation(of: Int(result), inBase: t)
+print(abc)
